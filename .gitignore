@@ -1,0 +1,15 @@
+# exclude the following files from the repository
+# archive folder and anything inside it
+
+# exclude the following files from the repository
+# exclude any file ending in .zip but only in the root folder
+
+# include files ending in .zip from any folder below the root folder using the
+# keyword "include" to override the previous rule
+--include **/*.zip 
+/*.zip
+/archives
+# this will include all files ending in .zip from any folder below the root folder
+# but the following rule will exclude all files in the archive folder and any subfolder even if they end in .zip
+# exclude all files ending in .zip from the archive folder and any subfolder
+
