@@ -4,7 +4,7 @@ from . import operators, preferences, ui, utils, addon_updater_ops
 bl_info = {
     "name": "ModelToAssets",
     "author": "CakeBox",
-    "version": (0, 0, 120),
+    "version": (0, 1, 0),
     "blender": (3, 5, 0),
     "location": "View3D > Sidebar > ModelToAssets",
     "description": "Generate assets from materials, meshes, hierarchies, and collections",
