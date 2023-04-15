@@ -4,7 +4,7 @@ from . import operators, preferences, ui, utils, addon_updater_ops
 bl_info = {
     "name": "ModelToAssets",
     "author": "CakeBox",
-    "version": (0, 0, 91),
+    "version": (0, 0, 120),
     "blender": (3, 5, 0),
     "location": "View3D > Sidebar > ModelToAssets",
     "description": "Generate assets from materials, meshes, hierarchies, and collections",
@@ -52,7 +52,7 @@ def unregister():
 
     # updater unregister first
     addon_updater_ops.unregister()
-    
+
     _unregister()
     # unregister the classes
 
@@ -60,10 +60,6 @@ def unregister():
     preferences.unregister()
     ui.unregister()
     # utils.unregister()
-
-
-if __name__ == "__main__":
-    register()
 
 
 if __name__ == "__main__":

@@ -1,3 +1,4 @@
+
 # from .preferences import get_addon_preferences
 from bpy_extras.io_utils import ExportHelper, ImportHelper
 import os
@@ -6,8 +7,6 @@ import bpy
 from bpy.props import StringProperty, IntProperty
 from . import addon_updater_ops
 
-def_packer = r"C:\Users\christopher\iCloudDrive\Code\CakesToys\Model_to_Assets\\"
-
 
 class ModelToAssetsPreferences(bpy.types.AddonPreferences):
     bl_idname = __package__
@@ -15,11 +14,14 @@ class ModelToAssetsPreferences(bpy.types.AddonPreferences):
     plugin_project_folder: bpy.props.StringProperty(
         name="Plugin Project Folder",
         description="Must contain 'pack_plugin.py'",
-        default=def_packer,
+        default=r"C:\Users\christopher\iCloudDrive\Code\CakesToys\Model_to_Assets",
         subtype='DIR_PATH'
     )
 
+    # Include imported updater properties
+
     # addon updater preferences from `__init__`, be sure to copy all of them
+
     auto_check_update: bpy.props.BoolProperty(
         name="Auto-check for Update",
         description="If enabled, auto-check for updates using an interval",

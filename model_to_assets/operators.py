@@ -60,7 +60,7 @@ class MakeMaterialIntoAssetOperatorPanel(bpy.types.Panel):
 
     def draw(self, context):
 
-        props = bpy.context.window_manager.make_material_into_asset
+        props = context.scene.model_to_assets
 
         layout = self.layout
         layout = layout.column()
@@ -121,7 +121,6 @@ classes = (
     MakeMeshObjectIntoAsset,
     MakeHierarchyIntoAsset,
     MakeCollectionIntoAsset,
-    UpdatePluginOperator,
 )
 
 _register, _unregister = bpy.utils.register_classes_factory(classes)

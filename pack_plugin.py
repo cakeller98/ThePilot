@@ -28,7 +28,8 @@ def quitter(linenumber=None, filename=__file__):
         quit()
     quit()
 
-def main()->str:
+
+def main():
 
     # config file path
     config_path = pathlib.Path('config.ini').absolute()
@@ -80,7 +81,8 @@ def main()->str:
     # change the current working directory back to the original working directory
     logging.debug('End of program')
     print(f'Zip file created: {zip_name}')
-    return "RESULT===>"+str(zip_name.absolute())
+    return "RESULT===>" + str(zip_name.absolute())
+
 
 def version_incrementer(init_path, increment):
     success, version = increment_version(init_path, increment)
@@ -174,7 +176,7 @@ def increment_version(init_path: str, increment=(0, 0, 0)):
         end = init_file.find('}', start) + 1
 
         logging.debug(f'\n\n\t-----init_file begin-------\n\n{init_file}'[
-                      0:end+1]+'\n\n\t-----init_file trunc-------\n\n')
+                      0:end + 1] + '\n\n\t-----init_file trunc-------\n\n')
 
         # extract the bl_info dictionary as a string
         bl_info_dict_string = init_file[start:end]
@@ -229,7 +231,7 @@ def inc_ver(ver=(0, 0, 0), inc=(0, 0, 1)):
     """
     version_new = []
     for i in range(len(ver)):
-        version_new.append(ver[i]+inc[i])
+        version_new.append(ver[i] + inc[i])
 
     return tuple(version_new)
 
@@ -237,4 +239,3 @@ def inc_ver(ver=(0, 0, 0), inc=(0, 0, 1)):
 if __name__ == '__main__':
     main()
     logging.info('Done')
-    
